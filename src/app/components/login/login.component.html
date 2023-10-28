@@ -1,12 +1,41 @@
-<h2>Login de usuario</h2>
-<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="text" class="form-control" formControlName="email">
+<body>
+
+   
+    <h2 class="texto-centrado"> RegistrAPP </h2>
+
+    <br>
+
+    <div class="card text-center">
+
+        <div class="card-header">
+            <h3>Login</h3>
+        </div>
+
+        <div class="card-body ">
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+
+                <div class="mb-3 ">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" formControlName="email" placeholder="nombre@ejemplo.com">
+                </div>
+            
+                <div class="mb-3">
+                    <label class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="d-grid gap-2">
+            
+                    <input type="submit" class="btn btn-success " value="Acceder">
+                    
+                </div>
+            </form>
+        </div>
+
+        <div class="card-footer text-body-secondary  "></div>
+
     </div>
-    <div class="mb-3">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-    </div>
-    <input type="submit" value="Enviar">
-</form>
+    
+</body>
+
+
+
