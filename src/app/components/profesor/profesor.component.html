@@ -1,15 +1,45 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" formControlName="name">
+<h2 class="texto-centrado"> RegistrAPP </h2>
+
+<br>
+
+
+
+
+
+
+
+<div class="card text-center">
+
+    <div class="card-header">
+        <h3>Iniciar CLase</h3>
     </div>
-    <div class="mb-3">
-        <label class="form-label">Sección</label>
-        <input type="text" class="form-control" formControlName="seccion">
+
+    <div class="card-body">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="name" placeholder=" Ej: Programacion">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sección</label>
+                <input type="text" class="form-control" formControlName="seccion" placeholder=" Ej: D002">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Horario</label>
+                <input type="text" class="form-control" formControlName="horario" placeholder=" Ej: 09:00 - 11:00 "> 
+            </div>
+
+            <div class="d-grid gap-2">
+                <input type="submit"  value="Crear Clase" class="btn btn-success "> 
+            </div>
+            
+
+        </form>
+
+     
+
     </div>
-    <div class="mb-3">
-        <label class="form-label">Horario</label>
-        <input type="text" class="form-control" formControlName="horario">
-    </div>
-    <input type="submit" value="Enviar" class="btn btn-info"> 
-</form>
+
+    <div class="card-footer text-body-secondary  "></div>
+
+</div>
