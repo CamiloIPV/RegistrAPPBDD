@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ClaseService } from 'src/app/service/clase.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-profesor',
@@ -12,7 +14,7 @@ export class ProfesorComponent implements OnInit {
   formulario: FormGroup;
 
 
-  constructor(private clasesService: ClaseService){
+  constructor(private clasesService: ClaseService, private userService: UserService, private router: Router){
     this.formulario = new FormGroup({
       name: new FormControl(),
       seccion: new FormControl(),
@@ -23,6 +25,15 @@ export class ProfesorComponent implements OnInit {
   ngOnInit(): void{
 
   }
+
+    //Función para deslogearse a través de un botón
+    onClick() {
+      this.userService.logout()
+        .then(() => {
+          this.router.navigate(['/login']);
+        })
+        .catch(error => console.log(error));
+    }
 
   async onSubmit(){
     console.log(this.formulario.value)
