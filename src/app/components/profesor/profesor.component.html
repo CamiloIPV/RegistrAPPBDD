@@ -2,16 +2,10 @@
 
 <br>
 
-
-
-
-
-
-
 <div class="card text-center">
 
     <div class="card-header">
-        <h3>Iniciar CLase</h3>
+        <h3>Iniciar Clase</h3>
     </div>
 
     <div class="card-body">
@@ -35,11 +29,28 @@
             
 
         </form>
-
-     
-
     </div>
 
-    <div class="card-footer text-body-secondary  "></div>
+    <div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+        </div>
+    </div>
+
+    
+    <div class="card-footer text-body-secondary  ">
+
+        <button (click)="onClick()" class="btn btn-danger mt-5" data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="This top tooltip is themed via CSS variables.">Cerrar sesión</button>
+    </div>
 
 </div>
