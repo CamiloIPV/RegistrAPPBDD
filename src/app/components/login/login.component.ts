@@ -26,6 +26,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    //Función para deslogearse a través de un botón
+    onClick() {
+      this.userService.logout()
+        .then(() => {
+          this.router.navigate(['/register']);
+        })
+        .catch(error => console.log(error));
+    }
+  
+  
+
   //Función para subir los datos ingresados a FireBase
   onSubmit() {
     // Obtenemos el correo electrónico del formulario
