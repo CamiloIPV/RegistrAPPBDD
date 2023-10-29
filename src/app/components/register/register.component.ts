@@ -37,4 +37,13 @@ export class RegisterComponent implements OnInit {
       .catch(error => console.log(error));
   }
 
+    //Función para deslogearse a través de un botón
+    onClick() {
+      this.userService.logout()
+        .then(() => {
+          this.router.navigate(['/login']);
+        })
+        .catch(error => console.log(error));
+    }
+
 }

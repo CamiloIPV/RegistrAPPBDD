@@ -25,17 +25,49 @@
                 </div>
                 <div class="d-grid gap-2">
             
-                    <input type="submit" class="btn btn-success " value="Acceder">
+                    <input type="submit"  class="btn btn-success " value="Acceder">
                     
                 </div>
             </form>
         </div>
 
-        <div class="card-footer text-body-secondary  "></div>
+        <div class="card-footer text-body-secondary  ">
+
+
+
+        </div>
+    
 
     </div>
+ <br>
+ <br>
+ <br>
+
+    <div class="card text-center">
+        
+
+        
+        <div class="card-body">
+            <div class="card-header">
+                <h4>¿No tienes una cuenta?</h4>
+            </div>
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+
+                <div class="d-grid gap-2">
+            
+                    <input type="submit" (click)="onClick()" class="btn btn-success " value="Registrate">
+                    
+                    
+                </div>
+            </form>
+        </div>
+
+    </div>
+
     
-</body>
+
+        
+    </body>
 
 
 
