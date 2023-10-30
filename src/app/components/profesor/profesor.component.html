@@ -5,6 +5,7 @@
 <div class="card text-center">
 
 
+
     <div class="card-body">
         <div class="d-grid gap-2 ">
             <button class="btn btn-success  " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Informacion</button>
@@ -21,49 +22,17 @@
         </div>
 
     </div>
+    <div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 
-    
-
-    <div class="card-header">
-        <h3>Iniciar Clase</h3>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+        </div>
     </div>
 
-
-    
-
-    <div class="card-body">
-        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-            <div class="mb-3">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" formControlName="name" placeholder=" Ej: Programacion">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Sección</label>
-                <input type="text" class="form-control" formControlName="seccion" placeholder=" Ej: D002">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Horario</label>
-                <input type="text" class="form-control" formControlName="horario" placeholder=" Ej: 09:00 - 11:00 "> 
-            </div>
-
-            <div class="d-grid gap-2">
-                <input type="submit"  value="Crear Clase" class="btn btn-success "> 
-            </div>
-            
-
-        </form>
-
-      
-    </div>
-
-  
-
-    
-    <div class="card-footer text-body-secondary  ">
-
-        <button (click)="onClick()" class="btn btn-danger mt-5" data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="This top tooltip is themed via CSS variables.">Cerrar sesión</button>
-    </div>
-
-</div>
