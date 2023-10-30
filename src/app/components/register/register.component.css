@@ -10,14 +10,3 @@
     
    }
 
-   .texto-centrado::before {
-    
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px; /* ajusta este valor para controlar la curvatura de las esquinas */
-    background: inherit;
-    border-radius: 20px 20px 0 0 ; /* este valor determina la curvatura de las esquinas inferiores */
-   }
