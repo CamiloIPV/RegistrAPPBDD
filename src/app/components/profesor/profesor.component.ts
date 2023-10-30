@@ -9,7 +9,7 @@ import { UserService } from 'src/app/service/user.service';
   templateUrl: './profesor.component.html',
   styleUrls: ['./profesor.component.css']
 })
-export class ProfesorComponent implements OnInit {
+export class ProfesorComponent{
 
   formulario: FormGroup;
 
@@ -22,9 +22,7 @@ export class ProfesorComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void{
-
-  }
+  
 
     //Función para deslogearse a través de un botón
     onClick() {

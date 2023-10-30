@@ -4,7 +4,28 @@
 
 <div class="card text-center">
 
+    <div class="card-body">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="name" placeholder=" Ej: Programacion">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sección</label>
+                <input type="text" class="form-control" formControlName="seccion" placeholder=" Ej: D002">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Horario</label>
+                <input type="datetime-local" name="timestamp" step="3" formControlName="horario"> 
+            </div>
 
+            <div class="d-grid gap-2">
+                <input type="submit"  value="Crear Clase" class="btn btn-success "> 
+            </div>
+
+
+        </form>
+    </div>
 
     <div class="card-body">
         <div class="d-grid gap-2 ">
@@ -34,5 +55,9 @@
             <p>Try scrolling the rest of the page to see this option in action.</p>
         </div>
         </div>
+    </div>
+
+    <div>
+        <button (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
     </div>
 

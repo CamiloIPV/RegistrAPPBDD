@@ -3,10 +3,13 @@
 <br>
 
 
-
-
-
-
+<div class="clases-list">
+  <div *ngFor="let clase of clases" class="clase-item">
+    <h3>{{ clase.name }}</h3>
+    <p>Sección: {{ clase.seccion }}</p>
+    <p>Horario: {{ clase.horario}}</p>
+  </div>
+</div>
 
 <div class="card text-center">
 
@@ -25,5 +28,9 @@
             </div>
         </div>
 
+    </div>
+
+    <div>
+        <button (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
     </div>
 

@@ -1,6 +1,8 @@
+import { Timestamp } from "firebase/firestore";
+
 export default interface Clase {
-    id?:string;
+    uid?:string;
     name:string;
     seccion:string;
-    horario:string;
+    horario:Timestamp;
 }

@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { AngularFireModule } from 'angularfire2';
-import { collection, getDocs } from 'firebase/firestore';
 import { ClaseService } from 'src/app/service/clase.service';
 import { UserService } from 'src/app/service/user.service';
-import { getFirestore } from 'firebase/firestore';
+
 
 @Component({
   selector: 'app-alumno',
@@ -20,25 +17,14 @@ export class AlumnoComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private claseService: ClaseService,
-    private firestore: Firestore
+    private claseService: ClaseService
   ) { }
-
-  async ngOnInit() {
-    const claseCollectionRef = collection(this.firestore, 'clases');
-    try{
-      const querySnapshot = await getDocs(claseCollectionRef);
-
-    querySnapshot.forEach((doc)=>{
-      if (doc.exists()){
-        const datos = doc.data();
-        console.log('Datos del documento:', datos);
-      }
-    }); 
-    }catch(error){
-      console.log('Error al obtener documentos de la colección:', error)
-    }
+  ngOnInit() {
+    this.claseService.getClases().subscribe((clases) => {
+      this.clases = clases;
+    });
   }
+
 
   //Función para deslogearse a través de un botón
   onClick() {
@@ -48,7 +34,6 @@ export class AlumnoComponent implements OnInit {
       })
       .catch(error => console.log(error));
   }
-
 
 
 
