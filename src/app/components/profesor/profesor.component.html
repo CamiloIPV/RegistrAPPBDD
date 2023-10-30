@@ -1,17 +1,38 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" formControlName="name">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Sección</label>
-        <input type="text" class="form-control" formControlName="seccion">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Horario</label>
-        <input type="text" class="form-control" formControlName="horario">
-    </div>
-    <input type="submit" value="Enviar" class="btn btn-info"> 
-    <button (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
+<h2 class="texto-centrado"> RegistrAPP </h2>
+
+<br>
+
+<div class="card text-center">
+
+
+
+    <div class="card-body">
+        <div class="d-grid gap-2 ">
+            <button class="btn btn-success  " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Informacion</button>
     
-</form>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Duoc: Tu Puerta al Conocimiento y al Futuro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>En Duoc, nuestra pasión es la educación. Somos una institución comprometida con la formación integral de nuestros estudiantes y con la creación de líderes del mañana. Con una rica historia que se remonta a décadas atrás, Duoc se ha convertido en un referente en la educación superior en Chile y en el extranjero.</p>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+        </div>
+    </div>
+

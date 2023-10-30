@@ -1,0 +1,11 @@
+.texto-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    height: 12vh; /* o la altura que desees */
+    border-radius: 0 0 20px 20px;
+    
+   }
