@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import Clase from '../interfaces/clase.interface';
-import { Firestore, addDoc, collection, getDoc, doc} from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Firestore, addDoc, collection, getDoc, doc, query, getDocs} from '@angular/fire/firestore';
+import { Observable, from, map } from 'rxjs';
+import { QuerySnapshot } from 'firebase/firestore';
 
 
 @Injectable({
@@ -19,11 +20,19 @@ export class ClaseService {
     return addDoc(claseRef, clase)
   }
 
-  getClase(claseId: string){
-    const claseRef = doc(this.firestore, 'clases', claseId);
-    return getDoc(claseRef)
+  getClases(): Observable<any[]> {
+    const clasesCollection = collection(this.firestore, 'clases');
+    const q = query(clasesCollection);
+    return from(getDocs(q)).pipe(
+      map((querySnapshot) => {
+        const clases: any[] = [];
+        querySnapshot.forEach((doc) => {
+          clases.push({ id: doc.id, ...doc.data() });
+        });
+        return clases;
+      })
+    );
   }
-
 
 } 
 
