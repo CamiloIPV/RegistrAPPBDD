@@ -4,33 +4,24 @@
 
 <div class="card text-center">
 
-    <div class="card-header">
-        <h3>Iniciar Clase</h3>
-    </div>
+
 
     <div class="card-body">
-        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-            <div class="mb-3">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" formControlName="name" placeholder=" Ej: Programacion">
+        <div class="d-grid gap-2 ">
+            <button class="btn btn-success  " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Informacion</button>
+    
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Duoc: Tu Puerta al Conocimiento y al Futuro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Sección</label>
-                <input type="text" class="form-control" formControlName="seccion" placeholder=" Ej: D002">
+            <div class="offcanvas-body">
+                <p>En Duoc, nuestra pasión es la educación. Somos una institución comprometida con la formación integral de nuestros estudiantes y con la creación de líderes del mañana. Con una rica historia que se remonta a décadas atrás, Duoc se ha convertido en un referente en la educación superior en Chile y en el extranjero.</p>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Horario</label>
-                <input type="text" class="form-control" formControlName="horario" placeholder=" Ej: 09:00 - 11:00 "> 
             </div>
+        </div>
 
-            <div class="d-grid gap-2">
-                <input type="submit"  value="Crear Clase" class="btn btn-success "> 
-            </div>
-            
-
-        </form>
     </div>
-
     <div>
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 
@@ -45,12 +36,3 @@
         </div>
     </div>
 
-    
-    <div class="card-footer text-body-secondary  ">
-
-        <button (click)="onClick()" class="btn btn-danger mt-5" data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="This top tooltip is themed via CSS variables.">Cerrar sesión</button>
-    </div>
-
-</div>
